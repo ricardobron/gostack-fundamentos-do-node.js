@@ -25,10 +25,6 @@ class CreateTransactionService {
       throw Error('You dot not have enough balance');
     }
 
-    if (!title || !value || !type) {
-      throw Error('Invalid params');
-    }
-
     const transaction = this.transactionsRepository.create({
       title,
       type,
